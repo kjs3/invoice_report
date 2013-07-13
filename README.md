@@ -11,9 +11,11 @@
 * Line-items are also separately grouped and sorted by total spent on item
 * Report is pretty-printed to the shell
 
-Everything is just straight Ruby/Core so you shouldn't need anything special
+Everything is just straight Ruby/Core so you shouldn't need anything special.
 
-Tests are just Minitest so you don't need any spec/mocha gems
+Tested on OS X 10.8 with Ruby 2.0.0p0 and Ruby 1.9.3p392
+
+Tests are just Minitest so you don't need any spec/mocha gems.
 
 ### How to run
 
