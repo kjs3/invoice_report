@@ -13,7 +13,7 @@
 
 Everything is just straight Ruby/Core so you shouldn't need anything special.
 
-Tested on OS X 10.8 with Ruby 2.0.0p0 and Ruby 1.9.3p392
+Tested on OS X 10.8 with Ruby 2.0.0p0, 1.9.3p392, and 1.9.2p320
 
 Tests are just Minitest so you don't need any spec/mocha gems.
 
