@@ -14,21 +14,6 @@ class Report
     calculate_totals
   end
 
-  def calculate_totals
-    tmp_totals = Hash.new(0)
-    @line_items.each do |line|
-      tmp_totals[line.item] += line.unit_price * line.quantity
-      @totals = tmp_totals.sort_by {|k,v| v}.reverse
-    end
-  end
-
-  def sort_line_items
-    @invoices.each do |invoice|
-      invoice.line_items.each { |line| @line_items << line }
-    end
-    @line_items.sort!{|a,b| [a.date, a.item] <=> [b.date, b.item]}
-  end
-
   def print(errors=nil)
     printf("\n\nAll Line Items\n\n")
     printf("%-10s %-24s %-7s %-12s %-12s\n", "Date", "Item", "Quant", "Unit Price", "Ext Price")
@@ -53,7 +38,6 @@ class Report
   private
 
   def generate_invoices(files)
-
     # rescue error and retry for as many files as there are
     # but don't allow an infinite loop
     error_retries = files.length
@@ -72,7 +56,21 @@ class Report
         end
       end
     end
+  end
 
+  def sort_line_items
+    @invoices.each do |invoice|
+      invoice.line_items.each { |line| @line_items << line }
+    end
+    @line_items.sort!{|a,b| [a.date, a.item] <=> [b.date, b.item]}
+  end
+
+  def calculate_totals
+    tmp_totals = Hash.new(0)
+    @line_items.each do |line|
+      tmp_totals[line.item] += line.unit_price * line.quantity
+      @totals = tmp_totals.sort_by {|k,v| v}.reverse
+    end
   end
 
 end
