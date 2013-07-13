@@ -52,6 +52,4 @@ class TestReport < Minitest::Unit::TestCase
     assert_equal "Beans Kidney", @report.line_items.last.item
   end
 
-
-
 end
