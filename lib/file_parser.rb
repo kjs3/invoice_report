@@ -1,3 +1,4 @@
+# coding: utf-8
 
 #
 # The job of this class is to take a file and transform it
@@ -35,10 +36,10 @@ class FileParser
   private
 
   def parse_csv_row(line)
-    line.split(",").each {|s| s.strip!}.each {|s| s.gsub!(/[$]+/,"")}
+    line.split(",").each {|s| s.strip!}.each {|s| s.gsub!(/[$€¢£¥₩₪₫₴₹]+/,"")}
   end
   def parse_psv_row(line)
-    line.split("|").each {|s| s.strip!}.each {|s| s.gsub!(/[$]+/,"")}
+    line.split("|").each {|s| s.strip!}.each {|s| s.gsub!(/[$€¢£¥₩₪₫₴₹]+/,"")}
   end
 
   def set_type
