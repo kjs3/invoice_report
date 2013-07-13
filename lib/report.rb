@@ -17,10 +17,7 @@ class Report
   def calculate_totals
     tmp_totals = Hash.new(0)
     @line_items.each do |line|
-      i = line.item
-      q = line.quantity
-      p = line.unit_price
-      tmp_totals[i] += p * q
+      tmp_totals[line.item] += line.unit_price * line.quantity
       @totals = tmp_totals.sort_by {|k,v| v}.reverse
     end
   end
