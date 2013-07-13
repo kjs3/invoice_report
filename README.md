@@ -23,12 +23,6 @@ Tests are just Minitest so you don't need any spec/mocha gems.
 rake report
 ```
 
-### Running Tests
-
-```
-rake test
-```
-
 ### Output
 
 ```
@@ -53,4 +47,10 @@ Apple Golden Delicious   44.00
 Beans Kidney             34.00
 Watermelon               28.00
 Flour White 50#          17.00
+```
+
+### Running Tests
+
+```
+rake test
 ```
