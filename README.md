@@ -2,7 +2,7 @@
 
 ### What it does
 
-* Reads in included csv and psv (pipe separated) txt files
+* Reads included csv and psv (pipe separated) txt files
 * Automatically determines if file is csv or psv
 * Files represent invoices and are split up into line-items
 * Line-items are parsed differently depending on csv or psv type
@@ -13,7 +13,7 @@
 
 Everything is just straight Ruby/Core so you shouldn't need anything special
 
-Tests are just Minitest so you don't need any spec/mocha gem
+Tests are just Minitest so you don't need any spec/mocha gems
 
 ### How to run
 
