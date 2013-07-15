@@ -1,7 +1,7 @@
-require "minitest/autorun"
+require "test/unit"
 require_relative "../lib/report"
 
-class TestReport < Minitest::Unit::TestCase
+class TestReport < Test::Unit::TestCase
 
   def test_initialized_report_takes_array_of_files_and_creates_invoices
     @report = Report.new(["line_items_comma.txt", "line_items_pipe.txt"])

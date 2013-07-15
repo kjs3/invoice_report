@@ -1,7 +1,7 @@
-require "minitest/autorun"
+require "test/unit"
 require_relative "../lib/invoice"
 
-class TestInvoice < Minitest::Unit::TestCase
+class TestInvoice < Test::Unit::TestCase
   def setup
     @invoice_comma = Invoice.new("line_items_comma.txt")
     @invoice_pipe = Invoice.new("line_items_pipe.txt")

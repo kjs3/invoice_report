@@ -1,7 +1,7 @@
-require "minitest/autorun"
+require "test/unit"
 require_relative "../lib/file_parser"
 
-class TestFileParser < Minitest::Unit::TestCase
+class TestFileParser < Test::Unit::TestCase
   def setup
     @file_comma = FileParser.new("line_items_comma.txt")
     @file_pipe = FileParser.new("line_items_pipe.txt")

@@ -1,7 +1,7 @@
-require "minitest/autorun"
+require "test/unit"
 require_relative "../lib/food_line_item"
 
-class TestFoodLineItem < Minitest::Unit::TestCase
+class TestFoodLineItem < Test::Unit::TestCase
 
   def test_initialized_empty_line_item
     @line_item = FoodLineItem.new()
